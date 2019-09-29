@@ -1,1 +1,290 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 2;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+.uiGradiant1 {
+  background: #BBD2C5;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #536976, #BBD2C5);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #536976, #BBD2C5);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.uiGradiant2 {
+  background: #acb6e5;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #86fde8, #acb6e5);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #86fde8, #acb6e5);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.uiGradiant3 {
+  background: #0f0c29;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+html,
+body {
+  height: 100%;
+  margin: 1%;
+}
+@media (max-width: 500px) {
+  html,
+  body {
+    background: #0f0c29;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+}
+h1 {
+  font-size: 2rem;
+}
+h2 {
+  font-size: 1rem;
+  font-weight: bold;
+}
+@media (max-width: 500px) {
+  h2 {
+    color: #f3d3eeec;
+  }
+}
+nav {
+  display: flex;
+  justify-content: flex-end;
+  justify-content: space-evenly;
+  margin-left: 40%;
+  background: #BBD2C5;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #536976, #BBD2C5);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #536976, #BBD2C5);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+nav a:hover {
+  color: #b8bed8;
+}
+.profileBox {
+  width: 100%;
+  min-height: 30vh;
+  border: 1px solid;
+  display: flex;
+  background: #acb6e5;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #86fde8, #acb6e5);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #86fde8, #acb6e5);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.profileBox .inBox {
+  justify-content: flex-end;
+  align-items: center;
+  margin-left: 40%;
+}
+.profileBox img {
+  display: flex;
+  flex-direction: column-reverse;
+  width: 70%;
+  min-width: 100px;
+  max-width: 350px;
+  /*actual image width */
+  height: auto;
+  /* maintain aspect ratio*/
+}
+.secondSection {
+  display: flex;
+  border: 1px solid red;
+  width: 100%;
+}
+.secondSection .skills {
+  width: 48%;
+  border: 1px solid green;
+  margin: 1%;
+}
+.secondSection .skills #skill1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.secondSection .portfolio {
+  width: 48%;
+  border: 1px solid blue;
+  margin: 1%;
+}
+.secondSection .portfolio #port1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.secondSection .portfolio #click1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.secondSection .portfolio table {
+  margin-right: -20%;
+  margin-left: 20%;
+}
+.secondSection .portfolio td {
+  border: 1px solid #b67bce;
+  text-align: left;
+  padding: 8px;
+}
+@media (max-width: 500px) {
+  .secondSection .portfolio td {
+    display: flex;
+    flex-direction: colum wrap;
+  }
+}
+.thirdSection {
+  display: flex;
+}
+.thirdSection .table1 {
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.thirdSection td,
+.thirdSection th {
+  border: 1px soled #acb6e5;
+  text-align: left;
+  padding: 8px;
+}
+.thirdSection tr:nth-child(even) {
+  background-color: #b8bed8;
+}
+footer p {
+  text-align: center;
+}
