@@ -52,34 +52,33 @@ table {
 * {
     box-sizing: border-box;
 }
-// #secondSection{
-//   display: flex;
-//   //flex-flow: row wrap;
-//   border: 1px solid red;
-//   width: 100%;
+//////////Preprocessors Below///////////
+.uiGradiant1{
+  background: #BBD2C5;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #536976, #BBD2C5);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #536976, #BBD2C5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-// .skills{
-//     width: 48%;
-//     border: 1px solid green;
-//     margin: 1%;
+}
+.uiGradiant2{
+   background: #acb6e5;  /* fallback for old browsers */
+   background: -webkit-linear-gradient(to right, #86fde8, #acb6e5);  /* Chrome 10-25, Safari 5.1-6 */
+   background: linear-gradient(to right, #86fde8, #acb6e5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.uiGradiant3{
+  background: #0f0c29;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-//   }
-//   .portfolio{
-//     width: 48%;
-//     border: 1px solid blue;
-//     margin: 1%;
-//     td{
-//     border: 1px solid #b67bce;
-//     text-align: left;
-//     padding: 8px;
-//     }
-//   }
-// }
+}
 
-
-html, body {
+@hoverColor: #b8bed8;
+////////////CSS with declared preprocessors//////////
+html, body { 
     height: 100%;
     margin: 1%;
+    @media (max-width: 500px){
+      .uiGradiant3();
+    }
 }
 h1{
   font-size: 2rem;
@@ -87,37 +86,30 @@ h1{
 h2{
   font-size: 1rem;
   font-weight: bold;
+  @media(max-width: 500px){
+    color: #f3d3eeec
+  }
 }
 nav{
   display: flex;
   justify-content: flex-end;
   justify-content: space-evenly;
   margin-left: 40%;
-  background: #BBD2C5;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #536976, #BBD2C5);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #536976, #BBD2C5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+.uiGradiant1();
   a:hover{
-	color: #b8bed8;
+	color: @hoverColor;
   }
 }
 .profileBox{
    width:100%;
    min-height: 30vh;
-   //min-width: 30vw;
-   /*margin:auto;*/
    border:1px solid;
    display: flex;
-   //justify-content: flex-start;
-   background: #acb6e5;  /* fallback for old browsers */
-   background: -webkit-linear-gradient(to right, #86fde8, #acb6e5);  /* Chrome 10-25, Safari 5.1-6 */
-   background: linear-gradient(to right, #86fde8, #acb6e5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-.inBox{
-   //flex-direction: row;
+.uiGradiant2();
+  .inBox{
    justify-content: flex-end;
    align-items: center;
-   margin-left: 40%;
-          
+   margin-left: 40%;      
 }
 img{
    display: flex;
@@ -127,15 +119,17 @@ img{
    max-width: 350px; /*actual image width */
    height: auto; /* maintain aspect ratio*/
    //margin: auto; /*optional centering of image*/
+   @media(max-width: 500px){
+      
+   }
    
 }//closing for image sizing
 }//closing for box with image
 .secondSection{
   display: flex;
-  //flex-flow: row wrap;
   border: 1px solid red;
   width: 100%;
-  //#secondSection();
+
   .skills{
     width: 48%;
     border: 1px solid green;
@@ -147,7 +141,6 @@ img{
   }
 
    }
-  //.skills();
   .portfolio{
     width: 48%;
     border: 1px solid blue;
@@ -165,21 +158,42 @@ img{
  table{
    margin-right: -20%;
    margin-left: 20%;
+   
  }
  td{
     border: 1px solid #b67bce;
     text-align: left;
     padding: 8px;
-    }
- // .portfolio();
+    @media(max-width: 500px){
+      display: flex;
+      flex-direction: colum wrap;
+   }
   }
+
+  }
+}
+
   .thirdSection{
     display: flex;
     .table1{
       width: 100%;
+      font-family: Arial, Helvetica, sans-serif;
+      
+    }
+    td, th{
+      border: 1px soled #acb6e5;
+      text-align: left; 
+      padding: 8px;
+    }
+    tr:nth-child(even){
+      background-color: #b8bed8;
     }
   }
+footer p{
+    text-align: center;
 }
+
+
 
 
 
